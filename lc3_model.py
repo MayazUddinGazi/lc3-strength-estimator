@@ -97,6 +97,14 @@ def domain_checks(x, mix):
         elif mix['kappa'] < 0.15: out.append(('warn', f'κ = {mix["kappa"]:.2f} is below the lowest clay in the data (0.15).'))
         else: out.append(('ok', f'κ = {mix["kappa"]:.2f} within 0.15–1.00.'))
     if x['gy'] / x['sum'] > 0.08: out.append(('warn', 'Gypsum above 8% of binder; the data contain up to about 5%.'))
+    if x['cc'] > 0 and mix['kappa'] is not None and mix['kappa'] > 0.8 and wb < 0.45:
+        out.append(('warn', f'High-purity metakaolin (κ = {mix["kappa"]:.2f}) at w/b {wb:.2f}: the kaolinite effect was learned mainly from one '
+                            'research group at w/b 0.50, and an external test on such a system (metakaolin ≥95%, w/b 0.40) was overpredicted by about 45%. '
+                            'Treat the prediction as an upper bound and anchor it on a control if possible.'))
+    if x['cc'] > 0 and x['cc'] + x['ls'] > 0:
+        r = x['cc'] / (x['cc'] + x['ls'])
+        if r < 0.55 or r > 0.78:
+            out.append(('warn', f'Calcined clay share of the SCM fraction is {r:.2f}; the model assigns one efficiency to clay + limestone and was fitted to a near-constant 2:1 ratio (0.67), so it predicts the same strength for different clay:limestone splits.'))
     return out
 
 
