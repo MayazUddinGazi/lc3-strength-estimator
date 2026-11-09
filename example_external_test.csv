@@ -1,0 +1,13 @@
+mix_id,cement_pct,calcined_clay_pct,limestone_pct,gypsum_pct,w_b,age_d,cure_T_C,kaolinite_pct,kaolinite_basis,fc_measured_MPa,control_fc_MPa,control_age_d,control_w_b,group
+Canbek2022 55:30:15 (L15-G0),55.0,30.0,15.0,0.0,0.4,3,23,95.0,calcined,27.6,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:30:15 (L15-G0),55.0,30.0,15.0,0.0,0.4,7,23,95.0,calcined,47.7,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:30:15 (L15-G0),55.0,30.0,15.0,0.0,0.4,28,23,95.0,calcined,55.3,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:22.5:22.5 (L15-G0),55.0,22.5,22.5,0.0,0.4,3,23,95.0,calcined,23.5,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:22.5:22.5 (L15-G0),55.0,22.5,22.5,0.0,0.4,7,23,95.0,calcined,43.7,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:22.5:22.5 (L15-G0),55.0,22.5,22.5,0.0,0.4,28,23,95.0,calcined,50.7,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:15:30 (L15-G0),55.0,15.0,30.0,0.0,0.4,3,23,95.0,calcined,22.9,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:15:30 (L15-G0),55.0,15.0,30.0,0.0,0.4,7,23,95.0,calcined,39.1,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:15:30 (L15-G0),55.0,15.0,30.0,0.0,0.4,28,23,95.0,calcined,48.1,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:30:15 (L3-G0),55.0,30.0,15.0,0.0,0.4,3,23,95.0,calcined,33.7,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Canbek2022 55:30:15 (L15-G2),53.9,29.4,14.7,2.0,0.4,7,23,95.0,calcined,42.4,,,,"Canbek 2022 (mortar, Georgia Tech)"
+Hossain2026 optimized LC3 concrete,54.75,34.68,10.48,0.09,0.391,28,25,,,51.54,,,,"Hossain 2026 (concrete, validation mix)"

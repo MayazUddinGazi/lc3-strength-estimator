@@ -145,11 +145,21 @@ with tab2:
     if ex_path.exists():
         cB.download_button('Download example: the 437 training observations with their 28-d controls',
                            ex_path.read_bytes(), 'example_training_data.csv', 'text/csv')
+    ext_path = HERE / 'example_external_test.csv'
+    if ext_path.exists():
+        st.download_button('Download example: external test set (12 rows from two studies not in the training data; '
+                           'Canbek et al. 2022, Hossain et al. 2026)', ext_path.read_bytes(), 'example_external_test.csv', 'text/csv')
     up = st.file_uploader('CSV file', type=['csv'])
-    use_example = st.checkbox('Use the example file instead (in-sample check: the model has seen these data)')
+    use_example = st.checkbox('Use the training-data example instead (in-sample check: the model has seen these data)')
+    use_ext = st.checkbox('Use the external test set instead (out-of-sample: the model has not seen these data)')
     src = None
     if up is not None:
         src = pd.read_csv(up)
+    elif use_ext and ext_path.exists():
+        src = pd.read_csv(ext_path)
+        st.info('Canbek et al. 2022: mortar cubes, w/b 0.40, metakaolin ≥95% kaolinite; values at 3 and 7 d and for two mixes at 28 d are derived from the '
+                'percentage changes reported in the paper (±1–2 MPa); no Portland cement control was reported. Hossain et al. 2026: one optimized LC3 concrete, '
+                '100 mm cubes, 28 d, kaolinite not reported, no control. Both studies were overpredicted without a reference; see the flags column.')
     elif use_example and ex_path.exists():
         src = pd.read_csv(ex_path)
     if src is not None:
