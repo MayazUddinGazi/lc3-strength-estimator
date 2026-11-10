@@ -16,9 +16,9 @@ University of Miami; manuscript under review (2026).
     pip install -r requirements.txt
     streamlit run app.py
 
-## Access code
-If `APP_PASSWORD` is set in Streamlit secrets (`.streamlit/secrets.toml` locally, or the app's Secrets on Streamlit
-Community Cloud), the app asks for it; without the secret the app is open.
+## Access
+The deployed app (https://lc3-strength.streamlit.app) is open. Setting `APP_PASSWORD` in Streamlit secrets would add an
+access code; it is not set.
 
 ## Files
 | File | Content |
